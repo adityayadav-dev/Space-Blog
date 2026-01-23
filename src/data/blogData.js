@@ -11,7 +11,7 @@ The rover's advanced instruments have detected sedimentary rocks that could only
 Scientists are particularly excited about the discovery because river deltas are known to preserve signs of ancient life on Earth. The team plans to collect samples from this region for eventual return to Earth, where they can be analyzed in detail.
 
 This discovery marks a significant milestone in our understanding of Mars' past and brings us one step closer to answering the fundamental question: Did life ever exist on Mars?`,
-        image: "/images/mars_rover_exploration_1769079895064.png",
+        image: "images/mars_rover_exploration_1769079895064.png",
         date: "2026-01-20",
         comments: [
             {
@@ -34,7 +34,7 @@ This latest deployment brings the total number of Starlink satellites in orbit t
 The first stage of the Falcon 9 rocket successfully landed on the autonomous drone ship "Just Read the Instructions" in the Atlantic Ocean, marking the booster's 15th successful flight and landing. This reusability is key to SpaceX's goal of making space access more affordable.
 
 Starlink has already begun transforming internet connectivity in remote regions, providing speeds comparable to traditional broadband services. The service is currently available in over 50 countries and continues to expand its coverage area.`,
-        image: "/images/satellite_deployment_1769079913385.png",
+        image: "images/satellite_deployment_1769079913385.png",
         date: "2026-01-18",
         comments: []
     },
@@ -50,7 +50,7 @@ These observations provide astronomers with invaluable insights into the process
 The images show dozens of previously unknown young stars, some still surrounded by the disks of material from which planets may eventually form. Scientists are particularly interested in studying these protoplanetary disks to better understand how planetary systems like our own solar system came into existence.
 
 The Carina Nebula, located approximately 7,500 light-years from Earth, is one of the largest and brightest nebulae in the sky. These new observations from JWST represent the most detailed view of this region ever obtained, opening new avenues for research into stellar evolution and planet formation.`,
-        image: "/images/james_webb_nebula_1769079930497.png",
+        image: "images/james_webb_nebula_1769079930497.png",
         date: "2026-01-15",
         comments: [
             {
@@ -73,7 +73,7 @@ The new solar arrays, known as iROSA (International Space Station Roll-Out Solar
 During the spacewalk, the astronauts carefully maneuvered the massive solar array into position and secured it to the station's truss structure. They also completed several other maintenance tasks, including replacing a faulty antenna and inspecting external equipment.
 
 This upgrade is part of a broader modernization effort to extend the operational life of the ISS through at least 2030. The additional power will support an increasing number of scientific experiments and commercial activities aboard the station.`,
-        image: "/images/astronaut_spacewalk_1769079949727.png",
+        image: "images/astronaut_spacewalk_1769079949727.png",
         date: "2026-01-12",
         comments: []
     },
@@ -89,7 +89,7 @@ The fully automated spacecraft performed flawlessly throughout the mission, demo
 This successful mission represents years of development and testing, bringing us closer to a future where space travel is accessible to more people. The company plans to conduct regular flights in the coming years, with tickets already sold for dozens of future missions.
 
 The flight also carried several scientific experiments, including studies on the effects of microgravity on the human body and tests of new materials in the space environment. This dual-purpose approach helps offset costs while advancing scientific knowledge.`,
-        image: "/images/rocket_launch_1769079967909.png",
+        image: "images/rocket_launch_1769079967909.png",
         date: "2026-01-10",
         comments: [
             {
@@ -112,7 +112,7 @@ The cluster, designated SPT-CL J2106-5844, contains hundreds of galaxies bound t
 What makes this discovery particularly intriguing is that galaxy clusters of this size were not expected to exist so early in the universe's history. Current cosmological models suggest that it should have taken much longer for gravity to assemble such a massive structure.
 
 The discovery was made possible by combining data from multiple telescopes, including the South Pole Telescope and the Hubble Space Telescope. Further observations with next-generation instruments will help astronomers better understand the formation and evolution of these cosmic giants.`,
-        image: "/images/galaxy_cluster_1769079989563.png",
+        image: "images/galaxy_cluster_1769079989563.png",
         date: "2026-01-08",
         comments: []
     },
@@ -130,7 +130,7 @@ Construction is planned to begin in 2030, with the first crew expected to occupy
 The project represents unprecedented international cooperation, with contributions from NASA, ESA, JAXA, and other space agencies. Private companies will also play a crucial role in developing the technologies needed for sustainable lunar operations.
 
 Scientists are particularly excited about the research opportunities the base will provide, including studies of lunar geology, astronomy from the Moon's surface, and testing technologies for future Mars missions.`,
-        image: "/images/moon_base_concept_1769080008193.png",
+        image: "images/moon_base_concept_1769080008193.png",
         date: "2026-01-05",
         comments: [
             {
@@ -161,7 +161,7 @@ These magnetic fields play a crucial role in channeling matter falling into the 
 The observations required coordinating eight radio telescopes around the world to create a virtual telescope the size of Earth. The data processing took over two years, involving sophisticated algorithms to reconstruct the image from the collected signals.
 
 This breakthrough opens new avenues for studying the most extreme environments in the universe and testing Einstein's theory of general relativity under the most intense gravitational conditions.`,
-        image: "/images/black_hole_visualization_1769080026030.png",
+        image: "images/black_hole_visualization_1769080026030.png",
         date: "2026-01-03",
         comments: [
             {
