@@ -1,12 +1,12 @@
 import Hero from '../components/Hero';
 import BlogCard from '../components/BlogCard';
+import CategorySection from '../components/CategorySection';
 import { useBlogStore } from '../hooks/useBlogStore';
-import { Rocket, Satellite, Telescope, Cpu, ArrowRight, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Rocket, Satellite, Telescope, Cpu, Sparkles, Loader } from 'lucide-react';
 import './Home.css';
 
 const Home = () => {
-    const { blogs } = useBlogStore();
+    const { blogs, loading, error } = useBlogStore();
 
     const latestBlogs = blogs.slice(0, 6);
 
@@ -41,6 +41,38 @@ const Home = () => {
         }
     ];
 
+    if (loading) {
+        return (
+            <div className="home">
+                <Hero />
+                <section className="section">
+                    <div className="container">
+                        <div className="loading-container">
+                            <Loader size={48} className="loading-spinner" />
+                            <p>Loading cosmic content...</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="home">
+                <Hero />
+                <section className="section">
+                    <div className="container">
+                        <div className="error-container">
+                            <h2>Oops! Something went wrong</h2>
+                            <p>{error}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        );
+    }
+
     return (
         <div className="home">
             <Hero />
@@ -57,47 +89,32 @@ const Home = () => {
                             Stay updated with the most recent developments in space exploration and astronomy
                         </p>
                     </div>
-                    <div className="grid grid-3">
-                        {latestBlogs.map(blog => (
-                            <BlogCard key={blog.id} blog={blog} />
-                        ))}
-                    </div>
+                    {latestBlogs.length > 0 ? (
+                        <div className="grid grid-3">
+                            {latestBlogs.map(blog => (
+                                <BlogCard key={blog.id} blog={blog} />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="no-posts">
+                            <p>No posts yet. Be the first to share your cosmic insights!</p>
+                        </div>
+                    )}
                 </div>
             </section>
 
-            {/* Explore Categories */}
-            <section className="section explore-section">
+            {/* Category Sections */}
+            <section className="section category-sections">
                 <div className="container">
-                    <div className="section-header">
-                        <h2 className="section-title">Explore by Category</h2>
-                        <p className="section-subtitle">
-                            Dive deeper into specific areas of space exploration
-                        </p>
-                    </div>
-                    <div className="grid grid-2">
-                        {categories.map(category => {
-                            const Icon = category.icon;
-                            return (
-                                <Link
-                                    key={category.id}
-                                    to={`/category/${category.id}`}
-                                    className="category-card glass-card"
-                                >
-                                    <div className="category-card-icon" style={{ background: category.gradient }}>
-                                        <Icon size={40} />
-                                    </div>
-                                    <div className="category-card-content">
-                                        <h3 className="category-card-title">{category.name}</h3>
-                                        <p className="category-card-description">{category.description}</p>
-                                    </div>
-                                    <div className="category-card-arrow">
-                                        <span>Explore</span>
-                                        <ArrowRight size={20} className="arrow-icon" />
-                                    </div>
-                                </Link>
-                            );
-                        })}
-                    </div>
+                    {categories.map(category => (
+                        <CategorySection
+                            key={category.id}
+                            category={category}
+                            blogs={blogs}
+                            icon={category.icon}
+                            gradient={category.gradient}
+                        />
+                    ))}
                 </div>
             </section>
         </div>
@@ -105,3 +122,4 @@ const Home = () => {
 };
 
 export default Home;
+

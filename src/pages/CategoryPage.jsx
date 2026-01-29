@@ -1,12 +1,12 @@
 import { useParams, Link } from 'react-router-dom';
 import { useBlogStore } from '../hooks/useBlogStore';
 import BlogCard from '../components/BlogCard';
-import { ArrowLeft, Rocket, Satellite, Telescope, Cpu } from 'lucide-react';
+import { ArrowLeft, Rocket, Satellite, Telescope, Cpu, Loader } from 'lucide-react';
 import './CategoryPage.css';
 
 const CategoryPage = () => {
     const { category } = useParams();
-    const { getBlogsByCategory } = useBlogStore();
+    const { blogs, loading, error } = useBlogStore();
 
     const categoryMap = {
         'exploration': {
@@ -46,7 +46,7 @@ const CategoryPage = () => {
         );
     }
 
-    const blogs = getBlogsByCategory(currentCategory.name);
+    const categoryBlogs = blogs.filter(blog => blog.category === currentCategory.name);
     const Icon = currentCategory.icon;
 
     return (
@@ -69,7 +69,7 @@ const CategoryPage = () => {
                         <h1 className="category-hero-title">{currentCategory.name}</h1>
                         <p className="category-hero-description">{currentCategory.description}</p>
                         <div className="category-stats">
-                            <span className="stat-item">{blogs.length} Articles</span>
+                            <span className="stat-item">{categoryBlogs.length} Articles</span>
                         </div>
                     </div>
                 </div>
@@ -77,9 +77,19 @@ const CategoryPage = () => {
 
             <section className="section">
                 <div className="container">
-                    {blogs.length > 0 ? (
+                    {loading ? (
+                        <div className="loading-container">
+                            <Loader size={48} className="loading-spinner" />
+                            <p>Loading posts...</p>
+                        </div>
+                    ) : error ? (
+                        <div className="error-container">
+                            <h2>Oops! Something went wrong</h2>
+                            <p>{error}</p>
+                        </div>
+                    ) : categoryBlogs.length > 0 ? (
                         <div className="grid grid-3">
-                            {blogs.map(blog => (
+                            {categoryBlogs.map(blog => (
                                 <BlogCard key={blog.id} blog={blog} />
                             ))}
                         </div>
@@ -98,3 +108,4 @@ const CategoryPage = () => {
 };
 
 export default CategoryPage;
+
