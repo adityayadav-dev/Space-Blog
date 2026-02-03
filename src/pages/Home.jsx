@@ -9,6 +9,7 @@ const Home = () => {
     const { blogs, loading, error } = useBlogStore();
 
     const latestBlogs = blogs.slice(0, 6);
+    const latestBlogIds = latestBlogs.map(blog => blog.id);
 
     const categories = [
         {
@@ -113,6 +114,7 @@ const Home = () => {
                             blogs={blogs}
                             icon={category.icon}
                             gradient={category.gradient}
+                            excludeIds={latestBlogIds}
                         />
                     ))}
                 </div>

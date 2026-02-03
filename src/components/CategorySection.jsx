@@ -3,8 +3,10 @@ import BlogCard from './BlogCard';
 import { ArrowRight } from 'lucide-react';
 import './CategorySection.css';
 
-const CategorySection = ({ category, blogs, icon: Icon, gradient }) => {
-    const categoryBlogs = blogs.filter(blog => blog.category === category.name).slice(0, 3);
+const CategorySection = ({ category, blogs, icon: Icon, gradient, excludeIds = [] }) => {
+    const categoryBlogs = blogs
+        .filter(blog => blog.category === category.name && !excludeIds.includes(blog.id))
+        .slice(0, 3);
 
     if (categoryBlogs.length === 0) {
         return null; // Don't show empty categories
