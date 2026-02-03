@@ -11,7 +11,7 @@
 [![Vite](https://img.shields.io/badge/Vite-7.2.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[Live Demo](#) • [Documentation](PROJECT_THEORY_AND_ABSTRACT.md) • [Report Bug](#) • [Request Feature](#)
+[Live Demo](https://space-blog-git-master-adityas-projects-66d5c571.vercel.app/) 
 
 </div>
 
